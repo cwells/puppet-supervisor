@@ -56,18 +56,21 @@ class supervisor (
   $supervisor_sysconfig    = $supervisor::params::supervisor_sysconfig
 
   if $supervisor_sysconfig_options == undef {
-    $supervisor_sysconfig_options = $supervisor::params::supervisor_sysconfig_options
+    $supervisor_sysconfig_options = 
+    $supervisor::params::supervisor_sysconfig_options
   }
 
   case $package {
-    true   : { $ensure_package = 'present' }
-    false  : { $ensure_package = 'purged' }
-    latest : { $ensure_package = 'latest' }
+    true    : { $ensure_package = 'present' }
+    false   : { $ensure_package = 'purged' }
+    latest  : { $ensure_package = 'latest' }
+    default : { fail('package must be true, false or lastest') }
   }
 
   case $service {
-    true  : { $ensure_service = 'running' }
-    false : { $ensure_service = 'stopped' }
+    true    : { $ensure_service = 'running' }
+    false   : { $ensure_service = 'stopped' }
+    default : { fail('service must be true or false') }
   }
 
   package { $supervisor_package_name: ensure => $ensure_package, }
@@ -85,7 +88,7 @@ class supervisor (
     file { $supervisor_sysconfig:
       ensure  => present,
       path    => $supervisor_sysconfig,
-      mode    => 0644,
+      mode    => '0644',
       content => template("supervisor/sysconfig.${::operatingsystem}.erb"),
       require => Package[$supervisor_package_name],
       notify  => Service[$supervisor_service_name],
@@ -94,7 +97,7 @@ class supervisor (
     # /etc/supervisor/conf.d
     file { $supervisor_conf_dir:
       ensure  => directory,
-      mode    => 0755,
+      mode    => '0755',
       require => Package[$supervisor_package_name],
       notify  => Service[$supervisor_service_name],
     }
@@ -105,9 +108,11 @@ class supervisor (
         ensure  => present,
         backup  => true,
         path    => "${supervisor_conf_dir}/01-unix_http_server.conf",
-        mode    => 0644,
+        mode    => '0644',
         content => template('supervisor/unix_http_server.conf.erb'),
-        require => [Package[$supervisor_package_name], File[$supervisor_conf_dir]],
+        require => [
+          Package[$supervisor_package_name],
+          File[$supervisor_conf_dir]],
         notify  => Service[$supervisor_service_name],
       }
     }
@@ -118,9 +123,11 @@ class supervisor (
         ensure  => present,
         backup  => true,
         path    => "${supervisor_conf_dir}/02-inet_http_server.conf",
-        mode    => 0644,
+        mode    => '0644',
         content => template('supervisor/inet_http_server.conf.erb'),
-        require => [Package[$supervisor_package_name], File[$supervisor_conf_dir]],
+        require => [
+          Package[$supervisor_package_name],
+          File[$supervisor_conf_dir]],
         notify  => Service[$supervisor_service_name],
       }
     }
@@ -131,9 +138,11 @@ class supervisor (
         ensure  => present,
         backup  => true,
         path    => "${supervisor_conf_dir}/03-supervisord.conf",
-        mode    => 0644,
+        mode    => '0644',
         content => template('supervisor/supervisord.conf.erb'),
-        require => [Package[$supervisor_package_name], File[$supervisor_conf_dir]],
+        require => [
+          Package[$supervisor_package_name],
+          File[$supervisor_conf_dir]],
         notify  => Service[$supervisor_service_name],
       }
     }
@@ -144,9 +153,11 @@ class supervisor (
         ensure  => present,
         backup  => true,
         path    => "${supervisor_conf_dir}/04-supervisorctl.conf",
-        mode    => 0644,
+        mode    => '0644',
         content => template('supervisor/supervisorctl.conf.erb'),
-        require => [Package[$supervisor_package_name], File[$supervisor_conf_dir]],
+        require => [
+          Package[$supervisor_package_name],
+          File[$supervisor_conf_dir]],
         notify  => Service[$supervisor_service_name],
       }
     }
