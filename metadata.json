@@ -1,0 +1,20 @@
+{
+  "name": "rentabiliweb-supervisor",
+  "version": "1.0.0",
+  "author": "Rentabiliweb",
+  "license": "ISC",
+  "summary": "Rentabiliweb supervisor module",
+  "source": "https://github.com/rentabiliweb/puppet-supervisor",
+  "dependencies": [],
+  "project_page": "https://github.com/rentabiliweb/puppet-supervisor",
+  "issues_url": "https://github.com/rentabiliweb/puppet-supervisor/issues",
+  "operatingsystem_support": [
+   	{ "operatingsystem": "Debian", "operatingsystemrelease": [ "5.0", "6.0", "7.0" ] },
+	{ "operatingsystem": "Ubuntu", "operatingsystemrelease": [ "10.04", "12.04", "14.04" ] },
+	{ "operatingsystem": "RedHat", "operatingsystemrelease": [ "5.0", "6.0" ] }
+  ],
+  "tags": [ "puppet", "supervisor", "supervisord", "autostart", "autoreload", "rentabiliweb" ],
+  "requirements": [
+    { "name": "puppet", "version_requirement": "3.x" }
+  ]
+}
