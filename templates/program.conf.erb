@@ -4,7 +4,7 @@
 
 # http://supervisord.org/configuration.html#program-x-section-settings
 
-[program:<%= @program_name -%>]
+[program:<%= @name -%>]
 <% if @program_command -%>
 command=<%= @program_command %>
 <% end -%>
