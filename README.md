@@ -10,7 +10,7 @@
 
 ##Overview
 
-The rentabiliweb-apticron module  enables you to install,  deploy, and configure
+The rentabiliweb-supervisor module  enables you to install,  deploy, and configure
 supervisor.
 
 ##Module Description
