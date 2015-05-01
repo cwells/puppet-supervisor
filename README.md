@@ -10,7 +10,7 @@
 
 ##Overview
 
-The rentabiliweb-supervisor module  enables you to install,  deploy, and configure
+The rentabiliweb-supervisor module enables you to install, deploy, and configure
 supervisor.
 
 ##Module Description
@@ -28,8 +28,35 @@ http://supervisord.org/
 
 ##Setup
 
+You   can   use   all  the   variables   you   can   find   in  the   manual   :
+http://supervisord.org/configuration.html.   We  use   all  default   values  in
+templates.
+
 ```puppet
 class { 'supervisor':
+  package                   => true,
+  service                   => true,
+  # daemon configuration
+  supervisord_logfile       => '/var/log/supervisor/supervisord.log',
+  supervisord_user          => 'root',
+  # http server configuration
+  inet_http_server          => '127.0.0.1',
+  inet_http_server_port     => '8080',
+  inet_http_server_username => 'login',
+  inet_http_server_passowrd => 'p4ssw0rd',
+}
+```
+
+You can now simply configure you program or daemon.
+
+```puppet
+supervisor::program { 'rentabiliweb':
+  program_command      => '/usr/sbin/rentabiliweb'
+  program_process_name => 'rentabiliweb',
+  program_autostart    => true,
+  program_autorestart  => true,
+  program_user         => 'www-data',
+  program_environment  => 'DEBUG=true',
 }
 ```
 
