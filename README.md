@@ -47,7 +47,7 @@ class { 'supervisor':
 }
 ```
 
-You can now simply configure you program or daemon.
+##Usage
 
 ```puppet
 supervisor::program { 'rentabiliweb':
@@ -59,8 +59,6 @@ supervisor::program { 'rentabiliweb':
   program_environment  => 'DEBUG=true',
 }
 ```
-
-##Usage
 
 ##Development
 
