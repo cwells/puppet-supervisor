@@ -1,6 +1,6 @@
 # == Class: supervisor::params
 #
-# This is a container class holding default parameters for supervisor class.
+# This is a container class holding default parameters for supervisor module.
 #
 class supervisor::params {
   case $::operatingsystem {
