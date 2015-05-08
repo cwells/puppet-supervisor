@@ -56,7 +56,7 @@ class supervisor (
   $supervisor_sysconfig    = $supervisor::params::supervisor_sysconfig
 
   if $supervisor_sysconfig_options == undef {
-    $supervisor_sysconfig_options = 
+    $supervisor_sysconfig_options =
     $supervisor::params::supervisor_sysconfig_options
   }
 
@@ -161,7 +161,6 @@ class supervisor (
         notify  => Service[$supervisor_service_name],
       }
     }
-
   }
 }
 # EOF
