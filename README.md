@@ -1,6 +1,8 @@
-#rentabiliweb-supervisor
+# rentabiliweb-supervisor
 
-####Table of Contents
+[![Build Status](https://travis-ci.org/rentabiliweb/puppet-supervisor.svg?branch=master)](https://travis-ci.org/rentabiliweb/puppet-supervisor)
+
+#### Table of Contents
 
 1. [Overview](#overview)
 2. [Module Description](#module-description)
@@ -8,12 +10,12 @@
 4. [Usage](#usage)
 5. [Development](#development)
 
-##Overview
+## Overview
 
 The rentabiliweb-supervisor module enables you to install, deploy, and configure
 supervisor.
 
-##Module Description
+## Module Description
 
 Supervisor  is a  client/server  system that  allows its  users  to monitor  and
 control a number of processes on UNIX-like operating systems.
@@ -26,7 +28,7 @@ at boot time.
 
 http://supervisord.org/
 
-##Setup
+## Setup
 
 You   can   use   all  the   variables   you   can   find   in  the   manual   :
 http://supervisord.org/configuration.html.   We  use   all  default   values  in
@@ -47,7 +49,7 @@ class { 'supervisor':
 }
 ```
 
-##Usage
+## Usage
 
 ```puppet
 supervisor::program { 'rentabiliweb':
@@ -60,7 +62,7 @@ supervisor::program { 'rentabiliweb':
 }
 ```
 
-##Development
+## Development
 
 Rentabiliweb  modules on  the  Puppet  Forge are  open  projects, and  community
 contributions are  essential for keeping  them great.  We can’t access  the huge
@@ -69,5 +71,3 @@ configurations that  Puppet is intended to  serve so feel free  to contribute on
 GitHub.
 
 Thanks https://github.com/puppetlabs/ for help to write this README :)
-
-
