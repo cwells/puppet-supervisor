@@ -4,13 +4,13 @@
 # Based on rentabiliweb-sample module.
 #
 class supervisor (
-  $package                      = true,
-  $service                      = true,
-  $enable                       = true,
+  $package       = true,
+  $service       = true,
+  $enable        = true,
   # Defaults for [unix_http_server] section.
   $unix_http_server             = true,
   $unix_http_server_file        = '/var/run//supervisor.sock',
-  $unix_http_server_chmod       = 0700,
+  $unix_http_server_chmod       = '0700',
   $unix_http_server_chown       = undef,
   $unix_http_server_username    = undef,
   $unix_http_server_password    = undef,
@@ -20,13 +20,13 @@ class supervisor (
   $inet_http_server_username    = undef,
   $inet_http_server_passowrd    = undef,
   # Defaults for[supervisord] section.
-  $supervisord                  = true,
+  $supervisord   = true,
   $supervisord_logfile          = '/var/log/supervisor/supervisord.log',
   $supervisord_logfile_maxbytes = undef,
   $supervisord_logfile_backups  = undef,
   $supervisord_loglevel         = undef,
   $supervisord_pidfile          = '/var/run/supervisord.pid',
-  $supervisord_umask            = 022,
+  $supervisord_umask            = '022',
   $supervisord_nodaemon         = false,
   $supervisord_minfds           = undef,
   $supervisord_minprocs         = undef,
@@ -38,7 +38,7 @@ class supervisor (
   $supervisord_environment      = undef,
   $supervisord_identifier       = 'supervisor',
   # Defaults for [supervisorctl] section.
-  $supervisorctl                = true,
+  $supervisorctl = true,
   $supervisorctl_serverurl      = 'unix:///var/run//supervisor.sock',
   $supervisorctl_username       = undef,
   $supervisorctl_password       = undef,
@@ -56,7 +56,7 @@ class supervisor (
   $supervisor_sysconfig    = $supervisor::params::supervisor_sysconfig
 
   if $supervisor_sysconfig_options == undef {
-    $supervisor_sysconfig_options =
+    $supervisor_sysconfig_options = 
     $supervisor::params::supervisor_sysconfig_options
   }
 
