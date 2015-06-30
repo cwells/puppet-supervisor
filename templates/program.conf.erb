@@ -75,16 +75,16 @@ stderr_logfile=<%= @program_stderr_logfile %>
 <% else -%>
 stderr_logfile=/var/log/supervisor/<%= @name -%>.err
 <% end -%>
-<% if @program_process_name -%>
+<% if @program_stderr_logfile_maxbytes -%>
 stderr_logfile_maxbytes=<%= @program_stderr_logfile_maxbytes %>
 <% end -%>
-<% if @program_process_name -%>
+<% if @program_stderr_logfile_backups -%>
 stderr_logfile_backups=<%= @program_stderr_logfile_backups %>
 <% end -%>
-<% if @program_process_name -%>
+<% if @program_stderr_capture_maxbytes -%>
 stderr_capture_maxbytes=<%= @program_stderr_capture_maxbytes %>
 <% end -%>
-<% if @program_process_name -%>
+<% if @program_stderr_events_enabled -%>
 stderr_events_enabled=<%= @program_stderr_events_enabled %>
 <% end -%>
 <% if @program_environment -%>
