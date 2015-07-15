@@ -18,7 +18,7 @@ class supervisor (
   $inet_http_server             = false,
   $inet_http_server_port        = undef,
   $inet_http_server_username    = undef,
-  $inet_http_server_passowrd    = undef,
+  $inet_http_server_password    = undef,
   # Defaults for[supervisord] section.
   $supervisord   = true,
   $supervisord_logfile          = '/var/log/supervisor/supervisord.log',

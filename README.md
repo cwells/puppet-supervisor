@@ -45,7 +45,7 @@ class { 'supervisor':
   inet_http_server          => '127.0.0.1',
   inet_http_server_port     => '8080',
   inet_http_server_username => 'login',
-  inet_http_server_passowrd => 'p4ssw0rd',
+  inet_http_server_password => 'p4ssw0rd',
 }
 ```
 
