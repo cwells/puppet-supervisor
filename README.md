@@ -1,6 +1,6 @@
 # rentabiliweb-supervisor
 
-[![Licence][licence-img]] [![Travis Status][travis-img]][travis-url] [![Travis Status][circle-img]][circle-url]
+[![Licence badge][licence-img]] [![Travis badge][travis-img]][travis-url] [![Circle badge][circle-img]][circle-url]
 
 #### Table of Contents
 
