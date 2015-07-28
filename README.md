@@ -1,6 +1,6 @@
 # rentabiliweb-supervisor
 
-[![Build Status](https://travis-ci.org/rentabiliweb/puppet-supervisor.svg?branch=master)](https://travis-ci.org/rentabiliweb/puppet-supervisor) [![Build Status](https://circleci.com/gh/rentabiliweb/puppet-supervisor.svg?style=shield&circle-token=f4c4ad07d49a9b67ca7f6c866b01acfd5ae03f01)](https://circleci.com/gh/rentabiliweb/puppet-supervisor)
+![Licence][licence] [![Travis Status][travis-img]][travis-url] [![Travis Status][circle-img]][circle-url]
 
 #### Table of Contents
 
@@ -71,3 +71,9 @@ configurations that  Puppet is intended to  serve so feel free  to contribute on
 GitHub.
 
 Thanks https://github.com/puppetlabs/ for help to write this README :)
+
+[licence] (https://img.shields.io/badge/licence-ISC-blue.svg)
+[travis-img] (https://travis-ci.org/rentabiliweb/puppet-supervisor.svg?branch=master)
+[travis-url] (https://travis-ci.org/rentabiliweb/puppet-supervisor)
+[circle-img] (https://circleci.com/gh/rentabiliweb/puppet-supervisor.svg?style=shield&circle-token=f4c4ad07d49a9b67ca7f6c866b01acfd5ae03f01)
+[circle-url] (https://circleci.com/gh/rentabiliweb/puppet-supervisor)
