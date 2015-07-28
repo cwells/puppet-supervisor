@@ -72,6 +72,14 @@ GitHub.
 
 Thanks https://github.com/puppetlabs/ for help to write this README :)
 
+    ╚⊙ ⊙╝
+  ╚═(███)═╝
+ ╚═(███)═╝
+╚═(███)═╝
+ ╚═(███)═╝
+  ╚═(███)═╝
+   ╚═(███)═╝
+
 [licence-img]: https://img.shields.io/badge/licence-ISC-blue.svg
 [travis-img]: https://travis-ci.org/rentabiliweb/puppet-supervisor.svg?branch=master
 [travis-url]: https://travis-ci.org/rentabiliweb/puppet-supervisor
