@@ -84,8 +84,8 @@ Thanks https://github.com/puppetlabs/ for help to write this README :)
 
 [license-img]: https://img.shields.io/badge/licence-ISC-blue.svg "Licence"
 [travis-img]: https://travis-ci.org/rentabiliweb/puppet-supervisor.svg?branch=master "Travis CI"
-[travis-url]: https://travis-ci.org/rentabiliweb/puppet-supervisor
+[travis-url]: https://travis-ci.org/rentabiliweb/puppet-supervisor "Travis CI"
 [circle-img]: https://circleci.com/gh/rentabiliweb/puppet-supervisor.svg?style=shield&circle-token=f4c4ad07d49a9b67ca7f6c866b01acfd5ae03f01 "Circle CI"
-[circle-url]: https://circleci.com/gh/rentabiliweb/puppet-supervisor
-[puppet-img]: https://img.shields.io/puppetforge/dt/rentabiliweb/supervisor.svg "Puppet Force"
-[puppet-url]: https://forge.puppetlabs.com/rentabiliweb/supervisor
+[circle-url]: https://circleci.com/gh/rentabiliweb/puppet-supervisor "Circle CI"
+[puppet-img]: https://img.shields.io/puppetforge/dt/rentabiliweb/supervisor.svg "Puppet Forge"
+[puppet-url]: https://forge.puppetlabs.com/rentabiliweb/supervisor "Puppet Forge"
