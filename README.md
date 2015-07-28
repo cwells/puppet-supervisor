@@ -1,6 +1,6 @@
 # rentabiliweb-supervisor
 
-![Licence badge][licence-img] [![Travis badge][travis-img]][travis-url] [![Circle badge][circle-img]][circle-url] [![Puppet badge][puppet-img]][puppet-url]
+![License badge][license-img] [![Travis badge][travis-img]][travis-url] [![Circle badge][circle-img]][circle-url] [![Puppet badge][puppet-img]][puppet-url]
 
 #### Table of Contents
 
@@ -72,6 +72,7 @@ GitHub.
 
 Thanks https://github.com/puppetlabs/ for help to write this README :)
 
+```
     ╚⊙ ⊙╝
   ╚═(███)═╝
  ╚═(███)═╝
@@ -79,11 +80,12 @@ Thanks https://github.com/puppetlabs/ for help to write this README :)
  ╚═(███)═╝
   ╚═(███)═╝
    ╚═(███)═╝
+```
 
-[licence-img]: https://img.shields.io/badge/licence-ISC-blue.svg
-[travis-img]: https://travis-ci.org/rentabiliweb/puppet-supervisor.svg?branch=master
+[license-img]: https://img.shields.io/badge/licence-ISC-blue.svg "Licence"
+[travis-img]: https://travis-ci.org/rentabiliweb/puppet-supervisor.svg?branch=master "Travis CI"
 [travis-url]: https://travis-ci.org/rentabiliweb/puppet-supervisor
-[circle-img]: https://circleci.com/gh/rentabiliweb/puppet-supervisor.svg?style=shield&circle-token=f4c4ad07d49a9b67ca7f6c866b01acfd5ae03f01
+[circle-img]: https://circleci.com/gh/rentabiliweb/puppet-supervisor.svg?style=shield&circle-token=f4c4ad07d49a9b67ca7f6c866b01acfd5ae03f01 "Circle CI"
 [circle-url]: https://circleci.com/gh/rentabiliweb/puppet-supervisor
-[puppet-img]: https://img.shields.io/puppetforge/dt/rentabiliweb/supervisor.svg
+[puppet-img]: https://img.shields.io/puppetforge/dt/rentabiliweb/supervisor.svg "Puppet Force"
 [puppet-url]: https://forge.puppetlabs.com/rentabiliweb/supervisor
