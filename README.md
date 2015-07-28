@@ -1,6 +1,6 @@
 # rentabiliweb-supervisor
 
-[![Licence][licence]] [![Travis Status][travis-img]][travis-url] [![Travis Status][circle-img]][circle-url]
+![Licence][licence-img] [![Travis Status][travis-img]][travis-url] [![Travis Status][circle-img]][circle-url]
 
 #### Table of Contents
 
@@ -72,7 +72,7 @@ GitHub.
 
 Thanks https://github.com/puppetlabs/ for help to write this README :)
 
-[licence] (https://img.shields.io/badge/licence-ISC-blue.svg)
+[licence-img] (https://img.shields.io/badge/licence-ISC-blue.svg)
 [travis-img] (https://travis-ci.org/rentabiliweb/puppet-supervisor.svg?branch=master)
 [travis-url] (https://travis-ci.org/rentabiliweb/puppet-supervisor)
 [circle-img] (https://circleci.com/gh/rentabiliweb/puppet-supervisor.svg?style=shield&circle-token=f4c4ad07d49a9b67ca7f6c866b01acfd5ae03f01)
