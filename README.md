@@ -1,6 +1,6 @@
 # rentabiliweb-supervisor
 
-[![Build Status](https://travis-ci.org/rentabiliweb/puppet-supervisor.svg?branch=master)](https://travis-ci.org/rentabiliweb/puppet-supervisor) [![Build Status](https://circleci.com/gh/:owner/:repo.svg?style=shield&circle-token=f4c4ad07d49a9b67ca7f6c866b01acfd5ae03f01)](https://circleci.com/gh/rentabiliweb/puppet-supervisor)
+[![Build Status](https://travis-ci.org/rentabiliweb/puppet-supervisor.svg?branch=master)](https://travis-ci.org/rentabiliweb/puppet-supervisor) [![Build Status](https://circleci.com/gh/rentabiliweb/puppet-supervisor.svg?style=shield&circle-token=f4c4ad07d49a9b67ca7f6c866b01acfd5ae03f01)](https://circleci.com/gh/rentabiliweb/puppet-supervisor)
 
 #### Table of Contents
 
