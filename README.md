@@ -83,7 +83,8 @@ Thanks https://github.com/puppetlabs/ for help to write this README :)
 ```
 
 [license-img]: https://img.shields.io/badge/licence-ISC-blue.svg "Licence"
-[travis-url]: https://travis-ci.org/rentabiliweb/docker-debian "Travis CI"
+[travis-img]: https://img.shields.io/travis/rentabiliweb/puppet-supervisor.svg "Travis CI"
+[travis-url]: https://travis-ci.org/rentabiliweb/puppet-supervisor "Travis CI"
 [circle-img]: https://img.shields.io/circleci/project/rentabiliweb/puppet-supervisor.svg "Circle CI"
 [circle-url]: https://circleci.com/gh/rentabiliweb/puppet-supervisor "Circle CI"
 [puppet-img]: https://img.shields.io/puppetforge/dt/rentabiliweb/supervisor.svg "Puppet Forge"
