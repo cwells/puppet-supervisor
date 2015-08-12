@@ -1,6 +1,4 @@
-# rentabiliweb-supervisor
-
-![License badge][license-img] [![Puppet badge][puppet-img]][puppet-url]
+# rentabiliweb-supervisor ![License badge][license-img] [![Puppet badge][puppet-img]][puppet-url]
 
 #### Table of Contents
 
@@ -82,6 +80,6 @@ Thanks https://github.com/puppetlabs/ for help to write this README :)
    ╚═(███)═╝
 ```
 
-[license-img]: https://img.shields.io/badge/licence-ISC-blue.svg "Licence"
+[license-img]: https://img.shields.io/badge/license-ISC-blue.svg "License"
 [puppet-img]: https://img.shields.io/puppetforge/dt/rentabiliweb/supervisor.svg "Puppet Forge"
 [puppet-url]: https://forge.puppetlabs.com/rentabiliweb/supervisor "Puppet Forge"
