@@ -1,4 +1,4 @@
-# rentabiliweb-supervisor ![License badge][license-img] [![Puppet badge][puppet-img]][puppet-url]
+# dalenys-supervisor ![License badge][license-img] [![Puppet badge][puppet-img]][puppet-url]
 
 #### Table of Contents
 
@@ -10,7 +10,7 @@
 
 ## Overview
 
-The rentabiliweb-supervisor module enables you to install, deploy, and configure
+The  dalenys-supervisor module  enables you  to install,  deploy, and  configure
 supervisor.
 
 ## Module Description
@@ -50,9 +50,9 @@ class { 'supervisor':
 ## Usage
 
 ```puppet
-supervisor::program { 'rentabiliweb':
-  program_command      => '/usr/sbin/rentabiliweb'
-  program_process_name => 'rentabiliweb',
+supervisor::program { 'dalenys':
+  program_command      => '/usr/sbin/dalenys'
+  program_process_name => 'dalenys',
   program_autostart    => true,
   program_autorestart  => true,
   program_user         => 'www-data',
@@ -62,7 +62,7 @@ supervisor::program { 'rentabiliweb':
 
 ## Development
 
-Rentabiliweb  modules on  the  Puppet  Forge are  open  projects, and  community
+Dalenys  modules  on   the  Puppet  Forge  are  open   projects,  and  community
 contributions are  essential for keeping them  great.  We can't access  the huge
 number  of   platforms  and  myriad   of  hardware,  software,   and  deployment
 configurations that  Puppet is intended to  serve so feel free  to contribute on
@@ -80,6 +80,6 @@ Thanks https://github.com/puppetlabs/ for help to write this README :)
    ╚═(███)═╝
 ```
 
-[license-img]: https://img.shields.io/badge/license-ISC-blue.svg "License"
-[puppet-img]: https://img.shields.io/puppetforge/dt/rentabiliweb/supervisor.svg "Puppet Forge"
-[puppet-url]: https://forge.puppetlabs.com/rentabiliweb/supervisor "Puppet Forge"
+[license-img]: https://img.shields.io/badge/license-ISC-blue.svg
+[puppet-img]: https://img.shields.io/puppetforge/dt/dalenys/supervisor.svg
+[puppet-url]: https://forge.puppetlabs.com/dalenys/supervisor

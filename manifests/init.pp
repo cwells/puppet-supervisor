@@ -1,12 +1,11 @@
 # == Class: supervisor
 #
 # Puppet supervisor module.
-# Based on rentabiliweb-sample module.
 #
 class supervisor (
-  $package       = true,
-  $service       = true,
-  $enable        = true,
+  $package                      = true,
+  $service                      = true,
+  $enable                       = true,
   # Defaults for [unix_http_server] section.
   $unix_http_server             = true,
   $unix_http_server_file        = '/var/run//supervisor.sock',
@@ -20,7 +19,7 @@ class supervisor (
   $inet_http_server_username    = undef,
   $inet_http_server_password    = undef,
   # Defaults for[supervisord] section.
-  $supervisord   = true,
+  $supervisord                  = true,
   $supervisord_logfile          = '/var/log/supervisor/supervisord.log',
   $supervisord_logfile_maxbytes = undef,
   $supervisord_logfile_backups  = undef,
@@ -38,7 +37,7 @@ class supervisor (
   $supervisord_environment      = undef,
   $supervisord_identifier       = 'supervisor',
   # Defaults for [supervisorctl] section.
-  $supervisorctl = true,
+  $supervisorctl                = true,
   $supervisorctl_serverurl      = 'unix:///var/run//supervisor.sock',
   $supervisorctl_username       = undef,
   $supervisorctl_password       = undef,
@@ -56,7 +55,7 @@ class supervisor (
   $supervisor_sysconfig    = $supervisor::params::supervisor_sysconfig
 
   if $supervisor_sysconfig_options == undef {
-    $supervisor_sysconfig_options =
+    $supervisor_sysconfig_options = 
     $supervisor::params::supervisor_sysconfig_options
   }
 
@@ -81,6 +80,7 @@ class supervisor (
       enable     => $enable,
       hasrestart => true,
       hasstatus  => true,
+      restart    => 'supervisorctl reload',
       require    => Package[$supervisor_package_name],
     }
 
