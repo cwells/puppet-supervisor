@@ -1,4 +1,4 @@
-# dalenys-supervisor ![License badge][license-img] [![Puppet badge][puppet-img]][puppet-url]
+# puppet-supervisor ![License badge][license-img] [![Puppet badge][puppet-img]][puppet-url]
 
 #### Table of Contents
 
@@ -10,8 +10,7 @@
 
 ## Overview
 
-The  dalenys-supervisor module  enables you  to install,  deploy, and  configure
-supervisor.
+The supervisor module enables you to install, deploy, and configure supervisor.
 
 ## Module Description
 
