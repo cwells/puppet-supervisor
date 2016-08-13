@@ -30,6 +30,8 @@ define supervisor::program (
   $program_environment             = undef,
   $program_directory               = undef,
   $program_umask                   = undef,
+  $program_conf_persmissions       = '0644',
+  $program_conf_backup             = true,
   $program_serverurl               = undef,) {
   # Include supervisor if not.
   if !defined(Class['supervisor']) {
@@ -42,9 +44,9 @@ define supervisor::program (
 
   file { "${supervisor_conf_dir}/${name}.conf":
     ensure  => present,
-    backup  => true,
+    backup  => $program_conf_backup,
     path    => "${supervisor_conf_dir}/${name}.conf",
-    mode    => '0644',
+    mode    => $program_conf_persmissions,
     content => template('supervisor/program.conf.erb'),
     require => [Package[$supervisor_package_name], File[$supervisor_conf_dir]],
     notify  => Service[$supervisor_service_name],
