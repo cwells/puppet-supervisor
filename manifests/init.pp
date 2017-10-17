@@ -86,9 +86,9 @@ class supervisor (
 
     # /etc/supervisor.conf
     file { $supervisor_conf_file:
-      ensire => present,
-      path   => $supervisor_conf_file,
-      mode   => '0644',
+      ensure  => present,
+      path    => $supervisor_conf_file,
+      mode    => '0644',
       content => template('supervisor/supervisor.conf.erb')
     }
 
