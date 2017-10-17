@@ -36,19 +36,12 @@ class supervisor::params {
 
     /(Amazon)/: {
       $supervisor_package_name      = 'supervisor'
-      $supervisor_service_name      = 'supervisor'
+      $supervisor_service_name      = 'supervisord'
       $supervisor_conf_dir          = '/etc/supervisor.d'
       $supervisor_conf_file         = 'supervisord.conf'
       $supervisor_sysconfig         = '/etc/sysconfig/supervisor'
       $supervisor_sysconfig_options = ''
       $supervisor_logrotate         = '/etc/logrotate.d/supervisor'
-
-      # file { $supervisor_conf_dir:
-      #   ensure => 'directory',
-      #   owner  => 'root',
-      #   group  => 'root',
-      #   mode   => '0755'
-      # }
     }
 
     default: {
