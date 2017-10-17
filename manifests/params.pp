@@ -4,7 +4,7 @@
 #
 class supervisor::params {
   case $::operatingsystem {
-    /(Debian|Ubuntu)/        : {
+    /(Debian|Ubuntu)/: {
       $supervisor_package_name      = 'supervisor'
       $supervisor_service_name      = 'supervisor'
       $supervisor_conf_dir          = '/etc/supervisor/conf.d'
@@ -13,8 +13,8 @@ class supervisor::params {
       $supervisor_sysconfig_options = ''
       $supervisor_logrotate         = '/etc/logrotate.d/supervisor'
     }
-    /(CentOS|Fedora|RedHat)/ : {
 
+    /(CentOS|Fedora|RedHat)/: {
       if (versioncmp($::operatingsystemmajrelease, '7') >= 0) {
         $supervisor_package_name      = 'supervisor'
         $supervisor_service_name      = 'supervisord'
@@ -33,16 +33,25 @@ class supervisor::params {
         $supervisor_logrotate         = '/etc/logrotate.d/supervisor'
       }
     }
-    /(Amazon)/ : {
+
+    /(Amazon)/: {
       $supervisor_package_name      = 'supervisor'
       $supervisor_service_name      = 'supervisor'
-      $supervisor_conf_dir          = '/etc/supervisor/conf.d'
+      $supervisor_conf_dir          = '/etc/supervisor.d'
       $supervisor_conf_file         = 'supervisord.conf'
       $supervisor_sysconfig         = '/etc/sysconfig/supervisor'
       $supervisor_sysconfig_options = ''
       $supervisor_logrotate         = '/etc/logrotate.d/supervisor'
+
+      file { $supervisor_conf_dir:
+        ensure => 'directory',
+        owner  => 'root',
+        group  => 'root',
+        mode   => '0755'
+      }
     }
-    default                  : {
+
+    default: {
       fail("Module supervisor is not supported on ${::operatingsystem}")
     }
   }
