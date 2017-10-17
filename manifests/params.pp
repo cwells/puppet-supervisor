@@ -43,12 +43,12 @@ class supervisor::params {
       $supervisor_sysconfig_options = ''
       $supervisor_logrotate         = '/etc/logrotate.d/supervisor'
 
-      file { $supervisor_conf_dir:
-        ensure => 'directory',
-        owner  => 'root',
-        group  => 'root',
-        mode   => '0755'
-      }
+      # file { $supervisor_conf_dir:
+      #   ensure => 'directory',
+      #   owner  => 'root',
+      #   group  => 'root',
+      #   mode   => '0755'
+      # }
     }
 
     default: {
