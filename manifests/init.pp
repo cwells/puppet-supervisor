@@ -55,7 +55,7 @@ class supervisor (
   $supervisor_sysconfig    = $supervisor::params::supervisor_sysconfig
 
   if $supervisor_sysconfig_options == undef {
-    $supervisor_sysconfig_options = 
+    $supervisor_sysconfig_options =
     $supervisor::params::supervisor_sysconfig_options
   }
 
@@ -82,6 +82,14 @@ class supervisor (
       hasstatus  => true,
       restart    => 'supervisorctl reload',
       require    => Package[$supervisor_package_name],
+    }
+
+    # /etc/supervisor.conf
+    file { $supervisor_conf_file:
+      ensire => present,
+      path   => $supervisor_conf_file,
+      mode   => '0644',
+      content => template('supervisor/supervisor.conf.erb')
     }
 
     # /etc/default/supervisor
